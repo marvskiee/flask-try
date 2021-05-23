@@ -11,10 +11,10 @@ class Request(db.Model):
 
 class Songs(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(50), nullable=False)
-    artist =  db.Column(db.String(50), nullable=False)
+    title = db.Column(db.Text, nullable=False)
+    artist =  db.Column(db.Text, nullable=False)
     lyrics =  db.Column(db.Text, nullable=False)
-    mode =  db.Column(db.String(10), nullable=False)
+    mode =  db.Column(db.Text, nullable=False)
     chords =  db.Column(db.Text, nullable=False)
 
     def __repr__(self):
